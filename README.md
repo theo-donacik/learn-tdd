@@ -49,6 +49,7 @@ should be placed in `tests/authorService.test.ts`.
 
 Briefly explain a limitation of the tests in `tests/authorSchema.test.ts` in the space below.
 
+- These tests are tightly coupled to our known implementation. They expect the /authors endpoint to use Author.getAllAuthors and to use the given sortOpts instead of, for example, sorting in memory after retrieving from the database. Changing this implementation would still satisfy the spec, but break the tests.
 
 
 ## Part 3
